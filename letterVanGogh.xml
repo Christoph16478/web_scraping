@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="vangoghschema.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding of Vincent Van Gogh's letter, written on October 11th, 1875</title>
+            <author ref="#VvG">Vincent van Gogh</author>
+            <editor role="editor" xml:id="VGM">Van Gogh Museum</editor>
+            <editor role="translator">Michael Hoyle</editor>
+            <respStmt>
+               <resp>Encoded by</resp>
+               <name xml:id="TK">Teresa Klug</name>
+            </respStmt>
+         </titleStmt>
+         <extent>4,09 Kb</extent>
+         <publicationStmt>
+            <publisher>Teresa Klug</publisher>
+            <pubPlace>Graz</pubPlace>
+            <availability status="restricted">
+               <p>Available under licence from the publishers.</p>
+            </availability>
+            <date when="2018-06-09">09.06.2018</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Waarde Theo,</title>
+               <author>Vincent van Gogh</author>
+               <pubPlace>Paris</pubPlace>
+               <lang>nl</lang>
+               <!-- Ich würde gerne einen Unterschied zwischen dem Originalbrief auf Niederländisch und der verwendeten
+           Übersetzung festlegen: wie zeichne ich diese am besten aus? Mit <lang>, <langUsage>(in der profileDesc) etc.?-->
+                
+                <!-- MS: da könnte derivation gut passen, siehe: http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD -->
+                
+               <date when="1875-10-11">Monday, 11th of October 1875</date>
+               <idno type="URI">http://vangoghletters.org/vg/letters/let055/letter.html</idno>
+            </bibl>
+            
+            <!-- MS: <listPerson> würde ich lieber in der <profileDesc> unterbringen -->
+            <listPerson type="personal">
+               <person xml:id="VvG">
+                  <persName>Vincent van Gogh</persName>
+               </person>
+               <person xml:id="TvG">
+                  <persName>Theo van Gogh</persName>
+               </person>
+               <person xml:id="HG">
+                  <persName>Harry Gladwell</persName>
+                  <age>18</age>
+                  <span resp="#TK">described as a "young Englishman" in the letter, obviously V. Van
+                     Gogh's roommate</span>
+               </person>
+               <person xml:id="T">
+                  <persName>Mr Tersteeg</persName>
+               </person>
+            </listPerson>
+            <listPerson type="artists">
+               <person xml:id="LC">
+                  <persName>Louis Cabat</persName>
+               </person>
+               <person xml:id="GB">
+                  <persName>Gustave Brion</persName>
+               </person>
+               <person xml:id="PdC">
+                  <persName>Philippe de Champaigne</persName>
+               </person>
+               <person xml:id="RB">
+                  <persName>Rosa Bonheur</persName>
+               </person>
+               <person xml:id="JFM">
+                  <persName>Jean-Francois Millet</persName>
+               </person>
+               <person xml:id="CFD">
+                  <persName>Charles-Francois Daubigny</persName>
+               </person>
+               <person xml:id="LFF">
+                  <persName>Louis-Francois Français</persName>
+               </person>
+               <person xml:id="EH">
+                  <persName>Ernest Hébert</persName>
+               </person>
+               <person xml:id="CG">
+                  <persName>Charles Gleyre</persName>
+               </person>
+               <person xml:id="EB">
+                  <persName>Emile Breton</persName>
+               </person>
+               <person xml:id="TD">
+                  <persName>Théophile Duverger</persName>
+               </person>
+               <person xml:id="CB">
+                  <persName>Camille Bernier</persName>
+               </person>
+               <person xml:id="KB">
+                  <persName>Karl Bodmer</persName>
+               </person>
+            </listPerson>
+            <listPerson type="writers">
+               <personGrp xml:id="EC">
+                  <persName xml:id="EE">Emile Erckmann</persName>
+                  <persName xml:id="AC">Alexandre Chatrian</persName>
+               </personGrp>
+               <person xml:id="ER">
+                  <persName>Ernest Renan</persName>
+               </person>
+               <person xml:id="JB">
+                  <persName>Jules Breton</persName>
+               </person>
+               <person xml:id="JM">
+                  <persName>Jules Michelet</persName>
+               </person>
+            </listPerson>
+            <listPlace>
+               <place xml:id="M">
+                  <placeName>
+                     <district>Montmartre</district>
+                     <settlement type="city">Paris</settlement>
+                     <country>France</country>
+                  </placeName>
+               </place>
+            </listPlace>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="nl">Dutch</language><!-- MS: wäre hier dann aber "en" -->
+         </langUsage>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName>Vincent van Gogh</persName>
+               <settlement>Paris</settlement>
+               <date when="1875-10-11"/>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#TvG">Theo van Gogh</persName>
+               <settlement>The Hague</settlement>
+            </correspAction>
+            <correspContext>
+               <ref type="prev" target="http://www.vangoghletters.org/vg/letters/let054/letter.html"
+                  > Previous letter from <persName>Vincent van Gogh</persName> to <persName>Theo van
+                     Gogh</persName>: <date when="1875-10-06">6th of October, 1875</date>
+               </ref>
+               <ref type="next" target="http://www.vangoghletters.org/vg/letters/let056/letter.html"
+                  > Next letter from <persName>Vincent van Gogh</persName> to <persName>Theo van
+                     Gogh</persName>: <date when="1875-10-14">14th of October, 1875</date></ref>
+            </correspContext>
+         </correspDesc>
+
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <pb n="1" facs="page_1.png"/><!-- Wieso funktioniert "facs" nur, wenn ich transcr-Modul in das Schema inkludiere? -->
+          <!-- MS: weil auch Attributklassen zu spezifischen Modulen gehören, nicht nur Elemente: http://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-att.global.facs.html  -->
+         <head type="letterHead"> Goupil &amp; Cie <lb/>Editeurs Imprimeurs <lb/>Estampes Françaises
+            &amp; Étrangères <lb/>Tableaux Modernes <lb/>Rue Chaptal, 9, PARIS. <lb/>Succursales à
+            la Haye, Londres,<lb/> Berlin, New-York. </head>
+         <opener rend="right"><dateline><placeName>Paris</placeName>, <date when="1875-10-11">11
+                  October 1875</date></dateline>
+            <salute>My dear <persName>Theo</persName>,</salute>
+         </opener>
+
+         <div type="body">
+            <p>Thanks for your letter of this morning. This time I’d like to write to you as I
+               seldom do; I’d actually like to tell you in detail about my life here. As you know, I
+               live in <placeName ref="#M">Montmartre</placeName>. Also living here is a young
+                  <persName ref="#HG">Englishman</persName>, an employee of the firm, 18 years old,
+               the son of an art dealer in London, who will probably enter his father’s firm later
+               on. <add place="margin(left)" resp="#VGM">Harry Gladwell</add>He had never been away
+               from home and was tremendously boorish, especially the first few weeks he was here;
+               he ate, for example, mornings, afternoons and evenings 4-6 sous worth of bread
+               (bread, nota bene, is cheap here) and supplemented that with pounds of apples and
+               pears &amp;c. In spite of all that he’s as lean as a pole, with two strong rows of
+               teeth, large red lips, sparkling
+            <pb n="2" facs="page_2.png"/>
+            eyes, a couple of large, <corr></corr>usually red, jug-ears, a shorn head (black hair) &amp;c.
+               &amp;c. I assure you, an altogether different creature from that lady by <persName
+                  ref="#PdC">Philippe de Champaigne</persName>. This young person was ridiculed a
+               lot in the beginning, even by me. But I nonetheless warmed to him gradually and now,
+               I assure you, I’m very glad of his company in the evenings. He has a completely naїve
+               and unspoiled heart, and works very hard in the firm. Every evening we go home
+               together, eat something or other in my room, and <del rend="crossout" hand="#VvG"
+                  >read</del> the rest of the evening I read aloud, usually from the Bible. We
+               intend to read it all the way through.In the morning, he’s already there to wake me
+               up, usually between 5 and 6 o’clock; we then have breakfast in my room and go to the
+               gallery around 8 o’clock. Recently he’s begun to eat with more moderation, and he’s
+               started to collect prints, with my help. Yesterday we went to <placeName>the
+                  Luxembourg</placeName> together and I showed him the paintings I like best
+               there.</p>
+            <pb n="3" facs="page_3.png"/>
+            <quote source="Bible, Matthew 11.25">And truthfully, unto babes is revealed much that is
+               hidden from the
+               wise.<!-- dieses Zitat stammt
+         offensichtlich in leicht veränderter Form aus der Bibel 
+         (Matthew 11.25; https://www.biblegateway.com/verse/en/Matthew%2011:25; wie codiere ich das denn am besten? -->
+            
+            <!-- MS: du kannst hier im  @source-Attribut einen Verweis auf einen normalisierten <bibl>-Eintrag machen, mit #bm11.25 zum Beispiel -->
+                
+            </quote>
+            <list>
+               <item><persName ref="#JB">J. Breton</persName>, Alone, The blessing of the corn,
+                  Calling the gleaners</item>
+               <item><persName ref="#GB">Brion</persName>, Noah, The pilgrims of St Odile.</item>
+               <item><persName ref="#CB">Bernier</persName>, Fields in winter</item>
+               <item><persName ref="#LC">Cabat</persName>. The pond and Autumnal evening</item>
+               <item><persName ref="#EB">Emile Breton</persName>, Winter evening.</item>
+               <item><persName ref="#KB">Bodmer</persName>, Fontainebleau</item>
+               <item><persName ref="#TD">Duverger</persName>, The labourer and his children</item>
+               <item><persName ref="#JFM">Millet</persName>, The church at Gréville</item>
+               <item><persName ref="#CFD">Daubigny</persName>, Spring and Autumn</item>
+               <item><persName ref="#LFF">Français</persName>, The end of winter and The
+                  cemetery</item>
+               <item><persName ref="#CG">Gleyre</persName>, Lost illusions and <persName ref="#EH"
+                     >Hébert</persName>, Christ in the Garden of Olives and Malaria</item>
+               <item>, also <persName ref="#RB">Rosa Bonheur</persName>, Ploughing &amp;c.</item>
+            </list>
+            <p>Also a painting by ? (I can’t remember his name), a monastery where monks receive a
+               stranger and suddenly notice that it is Jesus. Written on the wall of the monastery
+               is <quote xml:lang="fr" source="François de Salignac de La Mothe Fénelon">L’homme
+                  s’agite et Dieu le mène.</quote><quote xml:lang="fr" source="Matthew 10.40">Qui
+                  vous reçoit, me recoit et qui Me reçoit, reçoit celui qui m’a envoyé.</quote> At
+               the gallery I simply do whatever the hand finds to do, that is our work our whole
+               life long, old boy, may I do it with all my might.</p>
+            <pb n="4" facs="page_4.png"/>
+            <p>Have you done what I advised you to do, have you got rid of the books by <persName
+                  ref="#JM">Michelet</persName>, <persName ref="#ER">Renan</persName> &amp;c ? I
+               believe it will give you peace. You certainly won’t forget that page from
+                  <persName>Michelet</persName> about that portrait of a lady by <persName
+                  ref="#PdC">P. de Champaigne</persName>, and don’t forget
+                  <persName>Renan</persName> either, but still, get rid of them. <quote
+                  source="Proverbs 25.16" rend="PRE lsquo POST rsquo">‘If you have found honey, see
+                  to it that you don’t eat too much of it, lest it disagree with you’</quote> it
+               says in Proverbs, or something to that effect. Do you know <persName ref="#EC"
+                  >Erckmann-Chatrian</persName>, Le conscrit, Waterloo, and especially L’ami Fritz
+               and also Madame
+               Thérèse<!--Könnte ich diese Bücher ebenfalls kodieren und sie als zugehörig zu Erckmann-Chatrian
+               festlegen: evt. mit <rs> ? -->?
+                <!-- MS: ja, z.B. über <bibl source=""> oder <rs> oder <ref target="">. Hier gibt es mehrere Möglichkeiten.    -->
+                
+                
+               Read them some time if you can get hold of them. A change of fare whets the appetite
+               (provided we take especial care to eat <hi rend="underline">simply</hi><del>)</del>;
+               not for nothing is it written <quote source="Matthew 6.11"
+                  rend="PRE lsquo POST rsquo">‘Give us this day our daily <hi rend="underline"
+                     hand="#VvG">bread</hi>’</quote>), and the bow cannot always stay bent. You
+               won’t take it amiss if I tell you to do one thing and another. I know you have your
+               wits about you as well. Do not think <hi rend="underline" hand="#VvG">everything</hi>
+               good, and learn to distinguish for yourself between relative good and <hi
+                  rend="underline" hand="#VvG">evil</hi>; and let that feeling show you the right
+               way with guidance from above because, old boy, it’s so necessary <quote
+                  source="Proverbs 19.21" rend="PRE lsquo POST rsquo">‘that God dispose us’</quote>.
+               Do write again soon with some particulars, give my regards to my acquaintances,
+               especially <persName ref="#T">Mr Tersteeg</persName> and his family, and I wish you
+               the very best. Adieu, believe me ever,</p>
+         </div>
+
+         <closer rend="right"><salute>Your loving brother</salute>
+            <signed><persName><hi rend="underline">Vincent</hi></persName></signed>
+         </closer>
+      </body>
+   </text>
+
+</TEI>
